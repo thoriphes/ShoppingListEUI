@@ -1,0 +1,30 @@
+## Interface: 120000, 120001, 120005, 120007, 120100, 16001
+## Title: Shopping List |cff0cd29ffor EllesmereUI|r
+## Notes: Track recipes and see the reagents you still need to buy or gather. A plugin for EllesmereUI.
+## Category: Professions
+## Author: Nacho (thoriphes)
+## Version: 1.0.0
+## Dependencies: EllesmereUI
+## SavedVariablesPerCharacter: ShoppingListEUICharDB
+## IconTexture: Interface\Icons\INV_Misc_Bag_10
+## X-Website: https://github.com/thoriphes/ShoppingListEUI
+
+# Main Lua (module, settings, per-character list, events)
+ShoppingListEUI.lua
+
+# The list model: tracked recipes, reagent needs and counts
+ShoppingListEUI_Data.lua
+
+# The window
+ShoppingListEUI_Window.lua
+
+# Features
+ShoppingListEUI_Profession.lua
+ShoppingListEUI_Cooldowns.lua
+ShoppingListEUI_Vendor.lua
+ShoppingListEUI_Tooltip.lua
+ShoppingListEUI_AuctionHouse.lua
+
+# Options pages and the EllesmereUI integration (sidebar, import, registrations)
+ShoppingListEUI_Options.lua
+ShoppingListEUI_EUI.lua
