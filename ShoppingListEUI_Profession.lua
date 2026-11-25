@@ -31,12 +31,14 @@ local function FormRecipe()
 end
 
 -- Blizzard places its checkbox differently per client: top-right of the form
--- with its label running to the form's edge (retail), or bottom-left with room
--- after the label (WoW Forever). Read from the checkbox's own anchor: at the
--- top, our widgets go left of the checkbox; else right of its label.
+-- with its label running to the form's edge (retail), bottom-right with its
+-- label ending 20 px from the edge (WoW Forever since 1.60.1.70291), or
+-- bottom-left with room after the label (WoW Forever before that). Read from
+-- the checkbox's own anchor: on the form's right, our widgets go left of the
+-- checkbox; else right of its label.
 local function PlaceHolder()
     local point = anchor:GetPoint(1)
-    leftSide = type(point) == "string" and point:find("^TOP") ~= nil
+    leftSide = type(point) == "string" and point:find("RIGHT$") ~= nil
     holder:ClearAllPoints()
     if leftSide then
         holder:SetPoint("RIGHT", anchor, "LEFT", -8, 0)

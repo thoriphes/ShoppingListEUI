@@ -458,6 +458,9 @@ assert(holder._point[1] == "LEFT" and holder._point[2] == check.Text, "WoW Forev
 checkPoint = "TOPRIGHT"
 form:Init()
 assert(holder._point[1] == "RIGHT" and holder._point[2] == check, "retail: left of the checkbox")
+checkPoint = "BOTTOMRIGHT"
+form:Init()
+assert(holder._point[1] == "RIGHT" and holder._point[2] == check, "WoW Forever 70291+: left of the checkbox")
 checkPoint = "BOTTOMLEFT"
 check._shown = false
 form:Init()
